@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>Angular Demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="lib/angular/angular.min.js"></script>
+        <script src="js/controller.js"></script>
+    </head>
+    <body>
+        <div>
+            <input type="text" ng-model="query" placeholder="Search string" autofocus />
+            <br /><label>By: 
+                <select ng-model='presenterOrder'>
+                    <option value='name' selected>Name</option>
+                    <option value='enjoys'>Enjoys</option>
+                </select>
+            </label>
+            Order 
+            <label><input type='radio' ng-model='direction' name='direction' checked>Asc</label>
+            <label><input type='radio' ng-model='direction' name='direction' value='reverse'>Desc</label>
+        </div>
+        <div ng-controller="MyController">
+            <ul>
+                <li ng-repeat="presenter in presenters | filter: query | orderBy: presenterOrder:direction">
+                    <h2>{{presenter.name}}</h2>
+                    <p>{{presenter.enjoys}}</p>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
