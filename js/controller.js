@@ -13,23 +13,7 @@ var myApp = angular.module('myApp', [])
         {
             "name":     "Richard",
             "enjoys":   "Cars, money, motors,snow"
-        }/*,
-        {
-            "name":     "Kyle",
-            "enjoys":   "Snow"
-        },
-        {
-            "name":     "Tommy",
-            "enjoys":   "Campaigning, small jackets"
-        },
-        {
-            "name":     "Justin Rains",
-            "enjoys":   "Camping, Python, coding, Raspberry Pi"
-        },
-        {
-            "name":     "Mario",
-            "enjoys":   "Racing, carts, plumbing"
-        }*/
+        }
     ];
 //    $http.get('js/presenters.json').success(function(data) {
 //        $scope.presenters = data;
