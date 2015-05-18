@@ -20,13 +20,17 @@
             <label><input type='radio' ng-model='direction' name='direction' checked>Asc</label>
             <label><input type='radio' ng-model='direction' name='direction' value='reverse'>Desc</label>
         </div>
-        <div ng-controller="MyController">
+        <div ng-controller="MyController as presenterList">
             <ul>
-                <li ng-repeat="presenter in presenters | filter: query | orderBy: presenterOrder:direction">
+                <li ng-repeat="presenter in presenterList.presenters | filter: query | orderBy: presenterOrder:direction">
                     <h2>{{presenter.name}}</h2>
                     <p>{{presenter.enjoys}}</p>
                 </li>
             </ul>
-        </div>
+        <form ng-submit="presenterList.addPresenter()">
+            <input type="text" ng-model="presenterList.presenterText" />
+            <input class="btn-primary" type="submit" value="Add" />
+        </form>
+    </div>
     </body>
 </html>
