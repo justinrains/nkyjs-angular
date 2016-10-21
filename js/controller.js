@@ -19,6 +19,10 @@ var myApp = angular.module('myApp', [])
             "enjoys":   "Cars, money, motors,snow"
         }
     ];
+      presenterList.deleteuser = function(item) {
+        var index = $scope.presenterList.indexOf(item);
+        $scope.presenterList.splice(index, 1);
+      };
 //    $http.get('js/presenters.json').success(function(data) {
 //        $scope.presenters = data;
 //        $scope.presenterOrder = $scope.options[1];
@@ -26,7 +30,7 @@ var myApp = angular.module('myApp', [])
       presenterList.addPresenter = function() {
         presenterList.presenters.push({
             name: presenterList.presenterText,
-            enjoys: "Stuff"
+            enjoys: "Campfires, camping, hiking"
         });
         presenterList.presenterText = '';
       };

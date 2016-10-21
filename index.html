@@ -23,8 +23,10 @@
         <div ng-controller="MyController as presenterList">
             <ul>
                 <li ng-repeat="presenter in presenterList.presenters | filter: query | orderBy: presenterOrder:direction">
-                    <h2><a href="#"ng-click="">X</a> {{presenter.name}}</h2>
-                    <ul><li>{{presenter.enjoys}}</li></ul>
+<!---		    <p><a ng-click="deleteclub(club)">Delete</a>-->
+                    <p><a ng-click="presenterList.deleteuser(presenter)">Delete</a> {{presenter.name | uppercase}}<br />
+                    <ul><li>{{presenter.enjoys | uppercase}}</li></ul>
+		    </p>
                 </li>
             </ul>
         <form ng-submit="presenterList.addPresenter()">
