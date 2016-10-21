@@ -3,7 +3,11 @@ var myApp = angular.module('myApp', [])
       var presenterList = this;
       presenterList.presenters =  [
      {
-         "name":        "Mike",
+	"name":		"Laura",
+	"enjoys":	"camping, campfires"
+     },
+     {
+         "name":        "Justin",
          "enjoys":      "camping, fishing, target shooting"
      },
      {
@@ -17,7 +21,7 @@ var myApp = angular.module('myApp', [])
     ];
 //    $http.get('js/presenters.json').success(function(data) {
 //        $scope.presenters = data;
-////        $scope.presenterOrder = $scope.options[1];
+//        $scope.presenterOrder = $scope.options[1];
 //    }]);
       presenterList.addPresenter = function() {
         presenterList.presenters.push({
