@@ -23,8 +23,8 @@
         <div ng-controller="MyController as presenterList">
             <ul>
                 <li ng-repeat="presenter in presenterList.presenters | filter: query | orderBy: presenterOrder:direction">
-                    <h2>{{presenter.name}}</h2>
-                    <p>{{presenter.enjoys}}</p>
+                    <h2><a href="#"ng-click="">X</a> {{presenter.name}}</h2>
+                    <ul><li>{{presenter.enjoys}}</li></ul>
                 </li>
             </ul>
         <form ng-submit="presenterList.addPresenter()">
